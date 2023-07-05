@@ -1,0 +1,117 @@
+/* span 중에서 orange라는 class를 가지고 있는 애들만
+     * 이때 span인지 li인지에 대해서는 내가 수정할 수 있다
+     * class도 지정한 내용에 따라 변동하여 사용할 수 있다.
+span.orange {
+  color: red;
+}
+*ul의 하위 중에서 class 선택 (orange -> 다른 class로 변동가능)
+ul > .orange {
+  background-color: gray;
+}
+*ul의 
+ul .orange {
+  font-weight: bold;
+}
+.orange + li {
+  font-size: 30px;
+}
+.orange ~ li {
+  color: green;
+} *
+/* ------------------------------------------------- */
+/* div + p {
+  background-color: red;
+}
+ul > .lion {
+  background-color: greenyellow;
+  font-weight: 600;
+}
+#tiger {
+  background-color: yellow;
+}
+.lion {
+  color: sienna;
+}
+#tiger + li {
+  background-color: skyblue;
+}
+li.lion ~ li {
+  background-color: orange;
+} */
+/* a:hover {
+  color: red;
+}
+a:active {
+  color: red;
+  background-color: black;
+}
+input:focus {
+  background-color: lightgray;
+} */
+/* h1:hover {
+  color: red;
+}
+a:active {
+  background-color: blue;
+}
+input:focus {
+  background-color: orange;
+} */
+/* .fruits *:not(span) {
+  background-color: aqua;
+  color: red;
+}
+.fruits div:first-child {
+  color: blue;
+}
+.fruits h3:last-child {
+  text-decoration: line-through;
+}
+.fruits p:last-child {
+  color: green;
+} */
+/* div {
+  width: 100px;
+  height: 30;
+}
+.stripes div:nth-child(2n + 1) {
+  color: white;
+  background-color: navy;
+}
+.stripes div:nth-child(2n) {
+  color: black;
+  background-color: yellow;
+}
+.fruits::before {
+  content: "과일 목록 시작";
+}
+.fruits::after {
+  /* content: "과일 목록 끝";
+} */
+/* .box::before {
+  content: "택시";
+}
+.box::after {
+  content: "빨리";
+}
+input[disabled] {
+  background-color: black;
+}
+input[readonly] {
+  background-color: orange;
+}
+input[type="password"] {
+  color: red;
+} */
+input[disabled] {
+  background-color: red;
+}
+input[placeholder="이름"] {
+  background-color: orange;
+}
+input[value="pw"] {
+  background-color: blue;
+}
+input[value="000-0000-0000"] {
+  background-color: blue;
+}
