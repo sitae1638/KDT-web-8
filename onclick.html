@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   function test() {
+      //     alert("클릭했습니다.");
+      //   }
+      //   function test2(obj) {
+      //     console.
+      //   }
+      let num1 = Number(prompt("첫번째 숫자를 입력해주세요"));
+      let num2 = Number(prompt("두번째 숫자를 입력해주세요"));
+
+      function add() {
+        let result = num1 + num2;
+        alert(result);
+      }
+      function sub() {
+        let result = num1 - num2;
+        alert(result);
+      }
+      function divide() {
+        let result = num1 * num2;
+        alert(result);
+      }
+      function mul() {
+        let result = num1 / num2;
+        alert(result);
+      }
+    </script>
+  </head>
+  <body>
+    <!-- <button onclick="test()">버튼</button>
+    <div style="background-color: red" onclick="test()">안녕</div>
+    <input type="text" onchange="test()" /> -->
+    <button onclick="add()">add</button>
+    <button onclick="sub()">sub</button>
+    <button onclick="divide()">divide</button>
+    <button onclick="mul()">mul</button>
+  </body>
+</html>

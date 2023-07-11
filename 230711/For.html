@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   for (let i = 0; i < 10; i++) {
+      // 초기화 => i라는 변수를 0으로 세팅
+      // 조건 => i가 10보다 작을 때
+      // 증감식 => i를 1씩 키우겠다. (증가시키겠다)
+
+      //     console.log("i :", i);
+      //   }
+      //   출력결과
+      // i:0
+      // i:1
+      // i:2
+      // i:3
+      // ........
+
+      //   과제 7
+      //   for (let i = 1; i <= 1000; i++)
+      //     if (i % 13 == 0 && i % 2 == 1) {
+      //       console.log(i);
+      //     }
+
+      //   for (let i = 2; i < 10; i++) {
+      //     console.log(i + "단");
+      //     for (let j = 1; j < 10; j++) {
+      //       console.log(i + " x " + j + " = " + i * j);
+      //     }
+      //   }
+      // let flag = true;
+      // while(flag){let a = prompt("끝내고 싶음면 exit를 ")}
+      //while(n < 100){while}
+
+      /**
+       * for ( 초기화(1); 조건문(2); 증감식(3) ){
+       *  실제로 동작할 코드 (4)
+       * }
+       *
+       * (1)을 이용해서 먼저 초기화를 진행
+       * (2) 조건에 부합하는지를 확인
+       * (4) 명령문을 실행
+       * (3) 증감식을 이용해 변화를 준다.
+       * (2)조건을 확인
+       * (4) 명령문 실행
+       * (3) 증감식
+       **/
+      for (let i = 0; i < 10; i++) {
+        if (i % 2 == 0) continue;
+        console.log(i);
+      }
+      //   let flag = true;
+      //   while (flag) {
+      //     let a = prompt("끝내고 싶음면 exit를 ");
+
+      //     if (a == "exit") break;
+
+      //     console.log(a);
+      //   }
+      /**
+       * for가 자체적으로 조건에 변화를 주는 친구
+       * while은 조건만 확인.
+       *
+       * while ( 조건(1) ){
+       * 명령문(2)
+       * }
+       * (1) 조건을 확인
+       * (2) 명령문 실행
+       * (1) 조건 확인
+       * (2) 명령문 실행ㅌ
+       *
+       **/
+
+      // continue, breakl
+    </script>
+  </head>
+  <body></body>
+</html>
