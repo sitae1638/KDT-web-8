@@ -16,16 +16,16 @@
       console.log("toLowerCase : ", str.toLowerCase());
 
       // 3. index를 가져오기
-      console.log("index : ", str.indexof("y"));
-      console.log("index: ", str.lastindexof("y"));
+      console.log("index : ", str.indexOf("y"));
+      console.log("index: ", str.lastIndexOf("y"));
 
       // 4. 문자열 자르기(첫번째 파라미터는 필수, 두번째는 선택)
-      comsole.log("slice : ", ste.slice(0, 4));
+      console.log("slice : ", str.slice(0, 6));
 
       // 5. 바꾸기
       // replace : 제일 먼저 찾아지는 한 친구만 바뀐다.
       console.log("replace p -> a : ", str.replace("p", "a"));
-      console.log("replaceAll p -> a : ", str.replaceAll("a", "k"));
+      console.log("replaceAll p -> k : ", str.replaceAll("a", "k"));
 
       // 6. 반복(repreat)
       console.log("repeat : ", str.repeat(10));
@@ -38,7 +38,7 @@
 
       // 8. trim() : 좌 우 공백 제거
       console.log("trim 전 : ", str);
-      console.log("trim 후 : ", str, trim());
+      console.log("trim 후 : ", str.trim());
     </script>
   </head>
   <body></body>
