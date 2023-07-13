@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div div {
+        width: 100px;
+        height: 100px;
+        border: 1px;
+        background-color: yellow;
+        margin-right: 10px;
+      }
+    </style>
+    <script>
+      function createNode() {
+        // 노드를 만드는 친구구
+        // vreateElement(태그)
+        let li = document.createElement("li");
+        li.innerText = "새로 추가된 리스트";
+        console.log("td : ", td);
+      }
+      function appendNode() {
+        let input = document.getElementById("input");
+        let value = input.value;
+        //input 요소를 선택하고 value속성을 이용하면 입력창의 값을 가져올 수 있다.
+        console.log("value: ", value);
+
+        let li = document.createElement("li");
+        li.innerText = value;
+        console.log("li : ", li);
+        // append()  : 요소 append(), 선택한 요소의 맨 뒤 자식 요소로 추가가 된다.
+
+        let ul = document.querySelector("ul");
+        ul.append(li);
+        ul.append("안녕");
+      }
+
+      function appendChildNode() {
+        let inpur = document.getElementById("input");
+        let value = input.value;
+        //input 요소를 선택하고 value속성을 이용하면 입력창의 값을 가져올 수 있다.
+
+        let li = document.createElement("li");
+        li.innerText = value;
+        // appendChild()  : 요소 appendChild(), 선택한 요소의 맨 뒤 자식 요소로 추가가 된다. 그리고 문자열까지 다 추가가된다. 요소노드(태그)가 아니어도 추가를 시켜준다.
+
+        let ul = document.querySelector("ul");
+        ul.appendChild(li);
+        ul.append("안녕");
+      }
+
+      function prependNode() {
+        let inpur = document.getElementById("input");
+        let value = input.value;
+
+        let li = document.createElement("li");
+        li.innerText = value;
+
+        let ul = document.querySelector("ul");
+        ul.appendChild(li);
+        // prepend() : 요소 .prepend() 선택한 요소의 맨 앞 자식 요소로 추가가 된다.
+      }
+
+      function beforeNode() {
+        // 기준 노드 앞에 (형제 요소로 추가한다.)
+        let standard = document.getElementById("li");
+        let li = document.createElement("li");
+        li.innerText = "before";
+        standard.before(li);
+      }
+      function afterNode() {
+        let standard = document.getElementById("li");
+        console.log("standard : ", standard);
+        li.innerText = "after";
+        standard.before(li);
+      }
+      function removeNode() {
+        // remove() : 요소. remove() 내가 선택한 요소를 삭제
+        let standard = document.getElementById("li)");
+        standard.remove();
+      }
+      function removeChildNode() {
+        let ul = document.getElementById("ui)");
+        let standard = document.getElementById("li)");
+
+        ul.removeChild(standard);
+      } // removeChild
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li id="li">3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <button onclick="createNode()">createNode</button>
+    <!-- // 노드를 만드는 친구 // createElemnent(태그) -->
+
+    <br />
+    <button onclick="appendNode()">appendNode</button>
+    <br />
+    <button onclick="appendChildNode()">appendChildNode</button>
+    <br />
+    <button onclick="prependNode()">prependNode</button>
+    <br />
+    <button onclick="beforeNode()">beforeNode</button>
+    <br />
+    <button onclick="afterNode()">afterNode</button>
+    <br />
+    <button onclick="removeNode()">removeNode</button>
+    <br />
+    <button onclick="removeChildNode()">removeChildNode</button>
+    <br />
+    <script></script>
+  </body>
+</html>

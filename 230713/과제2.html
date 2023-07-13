@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function calculate() {
+        let value1 = document.getElementById("value1").value; // String
+        let value2 = document.getElementById("value2").value; // String
+
+        let op = document.getElementById("op").value;
+        let test = value1 + op + value2;
+        let result = eval(value1 + op + value2);
+        document.getElementById("result").value = result;
+
+        // value1 = Number(value1);
+        // value2 = Number(value2);
+        // let result = 0;
+        // switch (op) {
+        //   case "+":
+        //     result = value1 + value2;
+        //     break;
+        //   case "-":
+        //     result = value1 - value2;
+        //     break;
+        // }
+        // document.getElementById("result").value = result;
+      }
+      function reset() {
+        document.getElementById("result").value = "";
+      }
+    </script>
+  </head>
+  <body>
+    값1 : <input type="text" id="value1" />
+    <br />
+    값2 : <input type="text" id="value2" />
+    <br />
+    연산자 : <input type="text" id="op" />
+    <br />
+    결과 : <input type="text" id="result" />
+    <br />
+    <button onclick="calculate()">계산하기</button>
+    <button onclick="reset()">초기화</button>
+  </body>
+</html>
+
+Leader_린다 1분 미만 전
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      let num = 1;
+      function writeList() {
+        let writer = document.getElementById("writer").value;
+        let content = document.getElementById("content").value;
+
+        let date = new Date();
+        // 1.table 요소 가져온 후 tr, td createElement 만들고 tr에 append로 넣고, table에 tr 넣고
+
+        let tr = document.createElement("tr");
+        let html = `<td>${num}</td>`;
+        tr.innerHTML = html;
+        // let td1 = document.createElement("td");
+        // td1.innerText = num;
+        // td1.innerText = document.querySelectorAll("tr").length;
+        // let td2 = document.createElement("td");
+        // td2.innerText = writer;
+        // let td3 = document.createElement("td");
+        // td3.innerText = content;
+        // let td4 = document.createElement("td");
+        // td4.innerText = date;
+
+        // tr.append(td1);
+        // tr.append(td2);
+        // tr.append(td3);
+        // tr.append(td4);
+
+        let table = document.querySelector("table");
+        table.append(tr);
+        num++;
+      }
+    </script>
+  </head>
+  <body>
+    작성자 : <input type="text" id="writer" />
+    <br />
+    내용 : <input type="text" id="content" />
+
+    <br />
+    <button onclick="writeList()">작성</button>
+
+    <table border="1">
+      <tr>
+        <td>번호</td>
+
+        <td>작성자</td>
+        <td>내용</td>
+        <td>시간</td>
+      </tr>
+    </table>
+  </body>
+</html>

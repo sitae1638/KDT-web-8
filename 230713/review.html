@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      // switch 문은 어떤 변수가 그 변수의 값에 따라 동작을 다르게 할 때 사용
+      // switch(변수){
+      // case 값:
+      // breqk
+      //}
+
+      let a = "김";
+      switch (a) {
+        case "김":
+          console.log("성은 김입니다.");
+          break;
+        case "이":
+          console.log("성은 이입니다,.");
+          break;
+      }
+
+      if (a == "김") {
+        console.log("성은 김입니다,");
+      } else if (a == "이") {
+        console.log("성은 이입니다.");
+      }
+
+      // while : ~하는 동안
+      // while(조건) { }  : 조건이 일치하는 동안 계속 실행
+
+      let i = 0;
+      while (i < 10) {
+        console.log("i는 10보다 작습니다.");
+
+        i++;
+        if (i == 10) break;
+      }
+
+      for (let i = 0; i < 10; i++) {
+        console.log("i는 10보다 작습니다.");
+      }
+
+      //   let flag = true;
+      //   while ( flag ){
+      //     if ( 사용자가 종료를 희망하면 ) flag = false;
+      //   }
+      // 초기 -> 조건확인 -> 명령 -> 증감 -> 조건 확인 -> 명령 -> 증감...
+
+      // 메소드 체이닝
+      let arr = "hello";
+      let arr1 = arr.split(""); // arr1 = ['h','e','l','l','o']
+      let arr2 = arr1.reverse(); // arr2 = ['o','l','l','e','h']
+
+      //   arr1.push("3").;
+      let arr3 = arr.split("").reverse();
+
+      let b = arr1.push("3");
+      console.log(b);
+    </script>
+  </head>
+  <body></body>
+</html>
