@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // $(선택자).함수()
+      //$() : parameter로 선택자를 전달받아 특정 HTML요소를 선택한다. -> 선택된 요소는 Jquery객체
+      //함수 : Jquery 메소드
+      function setValue() {
+        document.getElementById("input").value = "안녕";
+        $("input").val("안녕");
+      }
+
+      // 위에거는 파라미터로 보내야 한다.
+
+      function getValue() {}
+      //   let value = document.getElementById("input").value;
+      // Jquery문법을 이용해서 input의 값 가져오기
+      // 위 두개가 같은 것
+      let value = $("#input").val();
+
+      function changeStyle() {
+        // let div = document.querySelector("div");
+        // div.style = "border: 10px solid black;s";
+        // $().css("속성",속성값)
+        $("div").css("border", "10px solid black");
+      }
+
+      function changeText() {
+        // let div = document.querySelector("div");
+        // div.innerText = "<b>Jquery 사용 전 글자 바꾸기</b>";
+        //   $()text();
+        $("div").text("<b>Jquery 사용 후 </b>");
+      }
+
+      function changeAttribute() {
+        // let a = document.querySelector("a");
+        // a.setAttribute("href", "https://google.com");
+        //setAttribute(속성, 속성값)
+        // $(),attr("속성", "속성값")
+        $("a").attr("href", "http://google.com");
+      }
+      function changeHTML() {
+        // let div = document.querySelector("div");
+        // div.innerText = "<b>Jquery 사용 전 글자 바꾸기</b>";
+        // $().html();
+        $("div").html("<b>Jquery 사용 후 </b>");
+      }
+    </script>
+
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+      }
+      .div1 {
+        background-color: red;
+      }
+      .div2 {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://naver.com">네이버</a>
+    <input type="text" id="input" />
+    <div class="div1"></div>
+    <div class="div2"></div>
+
+    <button onclick="setValue()">setValue</button>
+    <button onclick="getValue()">getValue</button>
+    <button onclick="changeStyle()">changeStyle</button>
+    <!-- innerText -->
+
+    <button onclick="changeText()">changeText</button>
+    <!-- setAttribute -->
+    <button onclick="changeAttribute()">changeAttribute</button>
+    <!-- innerHTML -->
+    <button onclick="changeHTML()">changeHTML</button>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      img {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      function apple() {
+        $("img").attr("src", "apple.webp");
+      }
+      function banana() {
+        $("img").attr("src", "banana.jpeg");
+      }
+      function grape() {
+        $("img").attr("src", "grape.jpeg");
+      }
+      function pitch() {
+        $("img").attr("src", "pitch.jpeg");
+      }
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <img src="" alt="" />
+      <br />
+      <button onclick="apple()">사과</button>
+      <button onclick="banana()">바나나</button>
+      <button onclick="grape()">포도</button>
+      <button onclick="pitch()">복숭아</button>
+    </div>
+  </body>
+</html>

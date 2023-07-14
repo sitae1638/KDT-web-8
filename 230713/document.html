@@ -29,9 +29,9 @@
     <input type="text" name="userName" id="userName" />
     <script>
       // 요소 선택
-      // 1. gotElementById
-      // id 속성값으로 요소를 선택해서 가져오는 친구
-      // 요소를 ㅎ나만 선택하는 친구
+      // 1. getElementById
+      // id 속성값으로 요소를 선택해서 가져온다.
+      // 요소를 맨 위에서 하나만 선택
       let dom1 = document.getElementById("green");
       console.log(dom1);
 
@@ -44,12 +44,12 @@
       //   }
 
       //3. getElementsByTagName
-      // 태그 이름을 기준으로 요소를 선택해서 가져ㄹ온다.
+      // 태그 이름을 기준으로 요소를 선택해서 가져온다.
       let dom3 = document.getElementsByTagName("div");
       console.log("dom3 : ", dom3);
 
       // 4. gerElementsByName
-      // name 속성값으로 요소를 선태규해서 가져온다.
+      // name 속성값으로 요소를 선택해서 가져온다.
       // HTMLCollection 배열
       let dom4 = document.getElementsByName("userName");
       console.log("dom4 : ", dom4);
