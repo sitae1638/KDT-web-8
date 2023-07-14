@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function append() {
+        let li = document.createElement("li");
+        // document.querySelector("ul").append(li);
+        // 선택한 요소의 자식 요소 중 마지막에 li를 추가하는 것이 append
+        // 위 두 줄을 Jquery로 표현하면 아래와 같다.
+        // 위 두 줄만 했을 때는 리스트만 추가하게 되고 아래의 내용을 넣어 텍스트까지 같이 추가할 수 있습니다.
+        $(li).text("이것은 JQuery append 입니다.");
+        $("ul").append(li);
+      }
+      //prepend는 사용하는 방법은 같으나 추가하는 요소가 맨 앞에 오는 것이다.
+
+      function before() {
+        let li = document.createElement("li"); //li 요소를 만들어내고
+        li.innerText = "이것은 before입니다."; // li에 들어갈 내용을 추가한다.
+        // document.querySelector("#li3").before(li.innerText);
+        // 위 아래의 코드가 만들고 내용을 넣은 li를 내가 기준으로 정한 요소 전에 추가한다.
+        $("#li3").before(li.innerText);
+      }
+      //.after도 before와 동일하지만 내가 선택한 요소 앞에 추가를 하는것.
+
+      function removeElement() {
+        // document.querySelector("ul").remove();
+        $("ul").remove();
+      }
+      function emptyElement() {
+        // let standard = document.querySelector("li");
+        // document.querySelector("ul").empty();
+        $("ul").empty();
+      }
+      // remove의 경우 해당 요소를 지우는 코드이며 요소 자체를 없앤다.
+      // empty의 경우 요소는 그대로 남겨두고 안의 텍스트만 없앤다.
+      // 만약 위 요소에서 remove를 할 경우 <ul>요소 자체가 없어지고 empty를 할 경우 <ul>요소 자체는 남아있다.
+
+      function findParent() {
+        console.log($(".child2").parent());
+      }
+      function findParents() {
+        console.log($(".child2").parents());
+      }
+      // parent는 바로 위에 부모요소만 반환하는 것이고
+      // parents는 html까지 모든 부모요소들까지 반환한다.
+
+      function findNext() {
+        console.log($(".child1").next());
+      }
+      function findPrev() {
+        console.log($(".child2").prev());
+      }
+      // next는 선택한 요소 뒷 요소를 선택
+      // prev는 선택한 요소 앞 요소를 선택
+      // 상위의 부모요소를 선택하는 것이 아니라. 위에 요소가 없으면 반환하지 않는다.
+
+      function findChildren() {
+        console.log($(".parent").children());
+      }
+      // 선택한 요소의 자식 요소 모두를 반환
+      // 단, 바로 아래의 자식 요소를 반환하는 것이며. 자식의 자식. 즉, 하위요소 전체를 반환하는 것이 아니다.
+
+      function addClass() {
+        $("#hi").addClass("fs-50");
+      }
+      // hi라는 id를 가진 요소에 fs-50이라는 클래스를 추가해주세요
+
+      function removeClass() {
+        $("#hi").removeClass("fs-50");
+      }
+      // hi라는 id를 가진 요소에 fs-50이라는 클래스를 제거해주세요
+      //$("#hi").removeClass(); => id hi의 모든 클레스를 제거
+
+      function hasClass() {
+        console.log($("#hi").hasClass("fs-50"));
+      }
+      // hi 라는 id가 있는 요소에 fs-50이라는 클레스가 있는지 확인여부를 true나 false로 반환
+    
+      function toggleClass() {
+        $("#hi").toggleClass("box1");
+      }
+      // hi라는 id가 있는 요소에 box1이라는 클레스가 없다면 추가하고 있다면 제거.
+    </script>
+    <style>
+      body {
+        padding-bottom: 300px;
+      }
+
+      /* 클래스 조작 */
+      .color-blue {
+        color: blue;
+      }
+
+      .fs-50 {
+        font-size: 50px;
+      }
+
+      .bg-pink {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <ul>
+      <li>1</li>
+      <li id="li2">2</li>
+      <li id="li3">3</li>
+    </ul>
+
+    <button onclick="append()">append</button>
+    <button onclick="prepend()">prepend</button>
+    <button onclick="before()">before</button>
+    <button onclick="after()">after</button>
+    <button onclick="search()">search</button>
+    <button onclick="removeElement()">removeElement</button>
+    <button onclick="emptyElement()">emptyElement</button>
+
+    <hr />
+    <h5>요소 탐색</h5>
+    <div class="ancestor">
+      <div class="parent">
+        <div class="child1">자식1</div>
+        <div class="child2">자식2</div>
+        <div class="child3">자식3</div>
+      </div>
+    </div>
+
+    <button onclick="findParent()">findParent</button>
+    <button onclick="findParents()">findParents</button>
+    <button onclick="findNext()">findNext</button>
+    <button onclick="findPrev()">findPrev</button>
+    <button onclick="findChildren()">findChildren</button> -->
+
+    <h2>클래스 조작하기</h2>
+    <p id="hi" class="color-blue">안녕하세요!</p>
+    <button type="button" onclick="addClass();">클래스 추가</button>
+    <button type="button" onclick="removeClass();">클래스 삭제</button>
+    <button type="button" onclick="hasClass();">클래스 유무 확인</button>
+    <button type="button" onclick="toggleClass();">클래스 토글</button>
+  </body>
+</html>

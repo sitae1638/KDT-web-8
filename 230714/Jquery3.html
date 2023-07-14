@@ -20,7 +20,7 @@
     <button>button</button>
     <input />
     <script>
-      // 이벤ㅌ
+      // 이벤트
       // 로딩 이벤트
       // 아래 3개의 이벤트가 모두 DOM 요소가 불러와진 후에 실행된다.
       $(window).ready(function () {
@@ -33,13 +33,14 @@
         console.log("로드 완료2");
       });
 
-      // addEventLister("이벤트명", 콜백함수)
+      // addEventLister("이벤트명", 콜백함수)와 동일한 개념.
       // $().on("이벤트명", "콜백함수")
       // $().on("click")
-      // addEventLister("click")
-      //   $("button").on("click", function () {
-      //     alert("클릭");
-      //   });
+      // addEventLister("click")와 동일
+      $("button").on("click", function () {
+        alert("클릭");
+      });
+      // 위 아래 두개의 방식으로 작동시킬 수 있다.
       $("button").click(function () {
         alert("클릭");
       });
