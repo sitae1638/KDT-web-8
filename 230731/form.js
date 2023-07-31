@@ -6,8 +6,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 //위 두가지는 정석으로 거의 고정하여 사용한다.
 //view engine
-app.set("view engine", "ejs");
-app.set("views", "./views");
+app.set("view engine", "ejs"); //ejs의 set up
+app.set("views", "./views"); // 어디에 template이 있는지 알려주는 것.
 
 //router
 app.get("/", (req, res) => {

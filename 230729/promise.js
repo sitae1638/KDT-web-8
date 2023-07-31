@@ -1,24 +1,24 @@
 //promise 객체를 반환하는 promise1 함수 정의
-// function promise1(flag) {
-//   return new Promise(function (ressolve, reject) {
-//     if (flag) {
-//       ressolve("promise 상태는 fulfilled, them으로 연결 ,이때 flag 값은 true");
-//     } else {
-//       reject("promise 상태는 rejected, catch로 연결, 이때 flag 값은 false");
-//     }
-//   });
-// }
+function promise1(flag) {
+  return new Promise(function (ressolve, reject) {
+    if (flag) {
+      ressolve("promise 상태는 fulfilled, them으로 연결 ,이때 flag 값은 true");
+    } else {
+      reject("promise 상태는 rejected, catch로 연결, 이때 flag 값은 false");
+    }
+  });
+}
 
-// // console.log(promise1(true));
-// // console.log(promise1(false));
+// console.log(promise1(true));
+// console.log(promise1(false));
 
-// promise1(false)
-//   .then(function (result) {
-//     console.log(result);
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
+promise1(false)
+  .then(function (result) {
+    console.log(result);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 
 //+++++++++++++++++++++++++++++++++++++++++++++
 // let product;
