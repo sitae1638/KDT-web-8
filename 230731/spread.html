@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spread</title>
+  </head>
+  <body>
+    <script>
+      //spread 연산자
+      const a = [1, 2, 3];
+      const b = [4, 5];
+      //기존에 합치는 방식
+      const concat = a.concat(b);
+      console.log(concat);
+      //spread 연산잔
+      const spread = [...a, ...b];
+      console.log(spread);
+      const spread_2 = [...b, ...a];
+      console.log(spread_2);
+
+      const person = {
+        name: "sitae",
+        age: 27,
+      };
+      console.log({ ...person });
+      const c = "Hello";
+      console.log([...c]);
+
+      //rest 파라미터
+      //일반적인 함수
+      function get(a, ...rest) {
+        console.log(a);
+        console.log(rest);
+      }
+      //   function get(...rest) {
+      //     console.log(rest);
+      //   }
+      get(10, 20, 30, 40, 50, 60);
+    </script>
+  </body>
+</html>
